@@ -9,7 +9,7 @@ html {
 body {
     width: 100%;
     font-size: 15px;
-    font-family: "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
+    font-family: "THE Lux Go", "Noto Sans KR", "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
     letter-spacing: -.5px;
     word-break: break-all;
     color: #111111;
@@ -23,7 +23,7 @@ body {
 }
 html,body {
     font-size: 16px;
-    font-family: "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
+    font-family: "THE Lux Go", "Noto Sans KR", "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
     font-weight: normal;
     line-height: 1.5;
     word-break: break-word;
@@ -42,7 +42,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, thead, tbody, tr
 }
 body, input, select, div, textarea, table, button {
     font-size: 16px;
-    font-family: "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
+    font-family: "THE Lux Go", "Noto Sans KR", "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
     font-weight: normal;
     line-height: 1.5;
     word-break: break-word;
@@ -139,7 +139,7 @@ input::placeholder {
     line-height: normal;
 }
 input[type=password] {
-    font-family: "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
+    font-family: "THE Lux Go", "Noto Sans KR", "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
 }
 input[type=text], input[type=password] {
     background:#ffffff;
@@ -241,7 +241,7 @@ a:hover, a:active, a:focus{
     text-decoration:none;
 }
 strong {
-    font-weight: normal;
+    /*font-weight: normal;*/
     color: #2f2f2f;
     font-size: 15px;
     line-height: 1;

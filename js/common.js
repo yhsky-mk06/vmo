@@ -28,6 +28,12 @@ $(document).ready(function(){
 
 
 $(function () {
+
+    AOS.init({
+        duration: 1200,
+    });
+
+
     // 메인 헤더 스크롤
     $("#wrap").on("scroll", scrollHandler);
 
