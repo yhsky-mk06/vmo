@@ -32,9 +32,11 @@
     <link rel="stylesheet" href="../vmo/css/swiper.min.css">
 
     <!-- script tag -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="../vmo/js/common.js"></script>
     <script src="../vmo/js/aos.js"></script>
     <script src="../vmo/js/swiper.min.js"></script>
+    <script src="../vmo/js/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div id="nav-skip" class="hidden">
@@ -183,19 +185,36 @@
                         <div class="swiper-wrapper main_swiper_box">
                             <div class="swiper-slide main_swiper_slide">
                                 <div class="main_video">
-                                    <video autoplay loop playsinline muted src="../vmo/images/common/stock-test-01.webm"></video>
+                                    <video autoplay loop playsinline muted>
+                                        <source src="../vmo/images/common/stock-test-01.webm">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="swiper-slide main_swiper_slide">
+                                <div class="main_video">
+                                    <video autoplay loop playsinline muted>
+                                        <source src="../vmo/images/common/stock-test-02.webm">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="swiper-slide main_swiper_slide">
+                                <div class="main_video">
+                                    <video autoplay loop playsinline muted>
+                                        <source src="../vmo/images/common/stock-test-03.webm">
+                                    </video>
                                 </div>
 <!--                                <span class="">고객과 함께 성장하는 기업 <strong>일신 비츠온</strong></span>-->
 <!--                                <i class="logo"><img src="../vmo/images/common/logo.png" alt="일신비츠온"></i>-->
                             </div>
-                            <div class="swiper-slide main_swiper_slide">
-<!--                                <span class="">고객과 함께 성장하는 기업 <strong>일신 비츠온</strong></span>-->
-<!--                                <i class="logo"><img src="../vmo/images/common/logo.png" alt="일신비츠온"></i>-->
-                            </div>
-                            <div class="swiper-slide main_swiper_slide">
-<!--                                <span class="">고객과 함께 성장하는 기업 <strong>일신 비츠온</strong></span>-->
-<!--                                <i class="logo"><img src="../vmo/images/common/logo.png" alt="일신비츠온"></i>-->
-                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="autoplay-progress">
+                            <svg viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="20"></circle>
+                            </svg>
+                            <span></span>
                         </div>
                     </div>
                 </div>

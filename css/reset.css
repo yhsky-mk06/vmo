@@ -2,6 +2,7 @@
 /* 초기화 공통 */
 html {
     height:100%;
+    overflow-x: hidden;
     overflow-y: scroll;
     font-size: 62.5%;
 }
