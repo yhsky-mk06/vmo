@@ -27,23 +27,28 @@ $(document).ready(function(){
 });
 
 
+
+$(window).on('load', function () {
+    AOS.refresh();
+});
+
 $(function () {
-
     AOS.init({
-        duration: 1200,
+        duration: 1200
     });
-
 
     // 메인 헤더 스크롤
     $("#wrap").on("scroll", scrollHandler);
 
     function scrollHandler() {
-        let t = $("#wrap").scrollTop();
-        fixed(t);
+        let to = $("#wrap").scrollTop();
+        fixed(to);
     }
 
-    function fixed(t) {
-        (t > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed");
+    function fixed(to) {
+        (to > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed");
         return;
     }
+
+
 });
