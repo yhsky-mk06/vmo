@@ -47,16 +47,24 @@ $(function () {
 
 
     // 메인 헤더 스크롤
+    $(window).on("load", loadHandler);
     $(window).on("scroll", scrollHandler);
+
+    function loadHandler() {
+        let to = $(window).scrollTop();
+        fixed(to);
+        right_top_button(to);
+    }
 
     function scrollHandler() {
         let to = $(window).scrollTop();
         fixed(to);
+        right_top_button(to);
     }
 
     function fixed(to) {
         (to > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed"),
-            (to > 50) ? $("#wrap").addClass("move") : $("#wrap").removeClass("move")
+            (to > 50) ? $("#wrap").addClass("move") : $("#wrap").removeClass("move");
         return;
     }
 
@@ -64,5 +72,24 @@ $(function () {
         duration: 1200
     });
 
+    //top 버튼
+    function right_top_button(to) {
+        (to > 550) ? $(".right-top").addClass("on") : $(".right-top").removeClass("on");
+        return;
+    }
+    $(".right-top").on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 });
+    });
 
+    //네비게이션
+    // 변수
+    var nav_item = ".dep-1";
+
+    // 호버
+    $(nav_item).hover(function(){
+        $(this).addClass("hover");
+    },function(){
+        $(this).removeClass("hover");
+    });
 });
