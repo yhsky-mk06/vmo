@@ -24,6 +24,17 @@ $(document).ready(function(){
             }
         }
     });
+
+    //메인 공지사항 스와이퍼
+    var notice_swiper = new Swiper(".notice_list_wrap", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    });
 });
 
 
@@ -33,22 +44,25 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    AOS.init({
-        duration: 1200
-    });
+
 
     // 메인 헤더 스크롤
-    $("#wrap").on("scroll", scrollHandler);
+    $(window).on("scroll", scrollHandler);
 
     function scrollHandler() {
-        let to = $("#wrap").scrollTop();
+        let to = $(window).scrollTop();
         fixed(to);
     }
 
     function fixed(to) {
-        (to > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed");
+        (to > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed"),
+            (to > 50) ? $("#wrap").addClass("move") : $("#wrap").removeClass("move")
         return;
     }
+
+    AOS.init({
+        duration: 1200
+    });
 
 
 });

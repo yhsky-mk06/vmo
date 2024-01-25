@@ -1,7 +1,6 @@
 @charset "utf-8";
 html,body {
     font-size: 16px;
-    font-family: "THE Lux Go", "Noto Sans KR", "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
     font-weight: normal;
     line-height: 1.5;
     word-break: break-word;
@@ -24,7 +23,7 @@ html,body {
     animation:fadeIn .15s linear forwards;
 }
 .main.move{
-    animation:fadeOut .075s ease-in-out forwards;
+
 }
 @keyframes fadeIn{
     from{
@@ -34,14 +33,6 @@ html,body {
         opacity:1;
     }
 }
-@keyframes fadeOut{
-    from{
-        opacity:1;
-    }
-    to{
-        opacity:0.03;
-    }
-}
 .tit_box{
     width:100%;
     border-bottom:1px solid #bfc4de;
@@ -49,7 +40,6 @@ html,body {
 .tit_box .tit{
     border-bottom:2px solid #303e87;
     font-size:20px;
-    font-family: "Noto Sans KR", "THE Lux Go", "malgun Gothic", "맑은고딕", Apple SD Gothic Neo, verdana, gulim, "굴림", dotum, "돋움", sans-serif;
     font-weight: 500;
     display: inline-flex;
     letter-spacing: -0.3px;
@@ -58,7 +48,8 @@ html,body {
 .inner{
     width:100%;
     max-width: 1260px;
-    margin: 150px auto 170px
+    margin: 0 auto;
+    padding: 0 0 170px;
 }
 
 
@@ -73,6 +64,7 @@ html,body {
     transition: background-color .3s, box-shadow .3s;
     z-index: 10;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .header.fixed{
     background-color: rgba(255,255,255,0.7);
@@ -82,7 +74,7 @@ html,body {
     display:block;
     width:100%;
     padding:8px 0;
-    background-color: #2c3c93;
+    background-color: rgba(44, 60, 147, 0.7);
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .header.fixed .top_menu{
@@ -98,6 +90,7 @@ html,body {
 }
 .header .top_menu ul li a{
     font-size:16px;
+    font-weight: 500;
     color: #ffffff;
 }
 
@@ -123,6 +116,7 @@ html,body {
 }
 .header .header_nav .gnb_box a span{
     font-size:18px;
+    font-weight: 600;
     color: #ffffff;
 }
 .header .header_nav .sub_gnb_box{
@@ -197,8 +191,7 @@ html,body {
 
 /* 메인 취급품목 */
 .main_handling_box{
-    max-width: 1260px;
-    margin: 150px auto 170px;
+    padding:150px 0 0 0;
 }
 .main_handling_box .handling_list{
     position: relative;
@@ -291,7 +284,7 @@ html,body {
 }
 
 
-    /* 고객센터 영역 */
+/* 고객센터 영역 */
 .main_customer_box{
     position: relative;
     margin:0 auto;
@@ -337,6 +330,81 @@ html,body {
     opacity: 0.6;
     letter-spacing: -0.3px;
     margin:80px 0 0 0;
+}
+
+/* 지역네트워크 */
+.main_network_box{
+    position: relative;
+}
+.main_network_box .txt{
+    font-size:18px;
+    color:#678bd5;
+    margin:15px 0 0 0;
+}
+.main_network_box .network_list{
+    background: url("../images/common/main_network_map_bg.png") no-repeat right top;
+    background-size: auto;
+    padding:130px 0 130px 0;
+    display:flex;
+    flex-direction: column;
+    gap: 35px 0;
+}
+.main_network_box .network_list li{
+    display:flex;
+}
+.main_network_box .network_list a{
+    display:flex;
+    gap: 0 75px;
+}
+.main_network_box .network_list a strong{
+    font-size:20px;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    min-width:135px;
+}
+.main_network_box .network_list a span{
+    font-size:18px;
+}
+
+/* 공지사항 */
+.main_notice_box{
+    position: relative;
+}
+.main_notice_box .tit_box{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main_notice_box .tit_box .more{
+    font-size:14px;
+    color: #ed1c24;
+    font-weight: 500;
+}
+.main_notice_box .tit_box .more:after{
+    content: ">";
+    color: #ed1c24;
+    margin:0 0 0 5px;
+}
+.main_notice_box .notice_list_wrap{
+    width:100%;
+    overflow: hidden;
+    margin:50px 0 0 0;
+}
+.main_notice_box .notice_list_box .notice_list_slide .notice_list_txt_box{
+    display:flex;
+    justify-content: space-between;
+    margin:24px 0 0 0;
+}
+.main_notice_box .notice_list_box .notice_list_slide .notice_list_txt_box .notice_num{
+    font-size:14px;
+    letter-spacing: -0.3px;
+    color: #aaaaaa;
+}
+.main_notice_box .notice_list_box .notice_list_slide .notice_list_txt_box .notice_tit{
+    font-size:14px;
+    letter-spacing: -0.3px;
+    color: #454545;
 }
 
 /* footer */
