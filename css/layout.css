@@ -96,6 +96,7 @@ html,body {
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(255,255,255,0.2);
     /*background-color: rgba(0,0,0,0.7);*/
+    background-color: rgba(255,255,255,0.7);
 }
 .header.fixed{
     background-color: rgba(255,255,255,0.7);
@@ -155,7 +156,7 @@ html,body {
     display: flex;
     padding: 60px 0;
     justify-content: center;
-    transition: opacity .3s, color .3s, background-color .3s;
+    transition: opacity 0.3s, color 0.3s, background-color 0.3s;
 }
 .header .header_nav .gnb_box .dep-1.hover{
     background-color: rgba(255,255,255,0.7);
@@ -166,7 +167,7 @@ html,body {
 .header .header_nav .gnb_box .dep-1 .main_gnb span{
     font-size:18px;
     font-weight: 600;
-    color: #ffffff;
+    color: #000000;
 }
 .header .header_nav .gnb_box .dep-1 .sub_gnb_box{
     visibility: hidden;
@@ -176,7 +177,7 @@ html,body {
     left:50%;
     transform: translate(-50%, 0);
     width:100%;
-    transition: opacity .3s, visibility .3s;
+    transition: opacity 0.3s, visibility 0.3s;
     background-color: rgba(255,255,255,0.7);
     z-index: 1001;
 }
