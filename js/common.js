@@ -93,35 +93,3 @@ $(window).on('load', function () {
     AOS.refresh();
 });
 
-$(".scroll_wrap").hide();
-$(".scroll_wrap").addClass("fixed");
-
-// 앵커 링크
-var pathname = jQuery(location).attr('pathname');
-var anchor_match = pathname.match(/\/company\/([^/]*)/);
-// console.log('anchor_match', anchor_match[1]);
-
-if (!isEmpty(anchor_match[1])) {
-    anchor = anchor_match[1]; // 값이 있으면 배열로 리턴되므로 두번째값에 적용
-    var anchor_target = $('.' + anchor);
-    if (anchor_target.length > 0) {
-        var offset = anchor_target.offset();
-        $('html, body').animate({
-            scrollTop: offset.top - 100
-        }, 400);
-    }
-
-}
-
-$(".scroll_wrap .target_list a").click(function(event) {
-    event.preventDefault();
-    console.log(".scroll_wrap .target_list a");
-    var anchor = $(this).attr("href");
-    var anchor_target = $('.' + anchor);
-    if (anchor_target.length > 0) {
-        var offset = anchor_target.offset();
-        $('html, body').animate({
-            scrollTop: offset.top - 100
-        }, 400);
-    }
-});
