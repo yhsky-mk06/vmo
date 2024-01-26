@@ -156,10 +156,10 @@ html,body {
     display: flex;
     padding: 60px 0;
     justify-content: center;
-    transition: opacity 0.3s, color 0.3s, background-color 0.3s;
+    /*transition: opacity 0.3s, color 0.3s, background-color 0.3s;*/
 }
 .header .header_nav .gnb_box .dep-1.hover{
-    background-color: rgba(255,255,255,0.7);
+    /*background-color: rgba(255,255,255,0.7);*/
 }
 .header .header_nav .gnb_box .dep-1.hover .main_gnb span{
     color: #000000;
@@ -173,7 +173,7 @@ html,body {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top:100%;
+    top:101%;
     left:50%;
     transform: translate(-50%, 0);
     width:100%;
@@ -275,6 +275,29 @@ html,body {
     stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
+}
+.main_slide_wrap .main_swiper_big_box .main_swiper_slide .main_video_txt{
+    max-width:400px;
+    font-size:70px;
+    color: #ffffff;
+    z-index: 10;
+    position: absolute;
+    top:50%;
+    left:28%;
+    transform: translate(-50%, -50%);
+}
+.main_slide_wrap .main_swiper_big_box .main_swiper_slide .main_video_txt strong{
+    font-size:70px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.main_slide_wrap .main_swiper_big_box .main_swiper_slide .main_video_logo{
+    display:block;
+    z-index: 10;
+    position: absolute;
+    bottom:25%;
+    left:24%;
+    transform: translate(-50%, -50%);
 }
 
 /* 메인 취급품목 */
