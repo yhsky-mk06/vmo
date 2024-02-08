@@ -99,7 +99,7 @@ $(window).on('load', function () {
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $(".header_nav").outerHeight();
+var navbarHeight = $(".header").outerHeight();
 
 $(window).scroll(function (event) {
     didScroll = true;
@@ -120,8 +120,8 @@ function hasScrolled() {
 
     if (st > lastScrollTop && st > navbarHeight) {
         // Scroll Down
-        if (!$(".header_nav").hasClass("fixed")) {
-            $(".header_nav").addClass("up");
+        if (!$(".header").hasClass("fixed")) {
+            $(".header").addClass("up");
         }
     }
 
@@ -187,12 +187,12 @@ $(function() {
 });
 
 
-//서브 영업소소개 js
-const mainTabItem = document.querySelectorAll('.tab_item')
-const mainTabInner = document.querySelectorAll('.tab_inner')
+//서브 영업소 소개
+const mainTabItem = document.querySelectorAll('.office_tab')
+const mainTabInner = document.querySelectorAll('.office_info')
 
 function updateTabPosition() {
-    const centerPos1 = document.querySelector('.tab_item.on').offsetLeft
+    const centerPos1 = document.querySelector('.office_tab.on').offsetLeft
     document.documentElement.style.setProperty('--tabLeftPos', centerPos1 + 'px')
 }
 
@@ -215,9 +215,50 @@ mainTabItem.forEach((tab, idx)=> {
 
 window.addEventListener('resize', function () {
     updateTabPosition();
-    mainVisualLayer();
 })
 
+//연혁
+$(function() {
+    var items = $(".history_box li"),
+        timelineHeight = $(".history_box ul").height(),
+        greyLine = $('.default-line'),
+        lineToDraw = $('.draw-line');
+
+    if(lineToDraw.length) {
+        $(window).on('scroll', function () {
+
+            var redLineHeight = lineToDraw.height(),
+                greyLineHeight = greyLine.height(),
+                windowDistance = $(window).scrollTop(),
+                windowHeight = $(window).height() / 2,
+                timelineDistance = $(".history_box").offset().top;
+
+            if(windowDistance >= timelineDistance - windowHeight) {
+                line = windowDistance - timelineDistance + windowHeight;
+
+                if(line <= greyLineHeight) {
+                    lineToDraw.css({
+                        'height' : line + 20 + 'px'
+                    });
+                }
+            }
+
+            var bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
+            items.each(function(index){
+                var circlePosition = $(this).offset();
+
+                if(bottom > circlePosition.top) {
+                    $(this).addClass('in-view');
+                } else {
+                    $(this).removeClass('in-view');
+                }
+            });
+        });
+    }
+});
+
+
+//지도
 function initMap() {
     const ls = { lat: 37.750253, lng: 127.228944 };
     const map = new google.maps.Map(document.getElementById("map_wrap"), {
