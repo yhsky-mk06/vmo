@@ -188,34 +188,26 @@ $(function() {
 
 
 //서브 영업소 소개
-const mainTabItem = document.querySelectorAll('.office_tab')
-const mainTabInner = document.querySelectorAll('.office_info')
+$(function() {
+    const tabItem = document.querySelectorAll('.office_tab')
+    const tabInner = document.querySelectorAll('.office_info')
 
-function updateTabPosition() {
-    const centerPos1 = document.querySelector('.office_tab.on').offsetLeft
-    document.documentElement.style.setProperty('--tabLeftPos', centerPos1 + 'px')
-}
+    tabItem.forEach((tab, idx)=> {
+        tab.addEventListener('click', function(){
+            tabInner.forEach((inner)=> {
+                inner.classList.remove('on')
+            })
 
-mainTabItem.forEach((tab, idx)=> {
-    tab.addEventListener('click', function(){
-        mainTabInner.forEach((inner)=> {
-            inner.classList.remove('on')
+            tabItem.forEach((item)=> {
+                item.classList.remove('on')
+            })
+
+            tabItem[idx].classList.add('on')
+            tabItem[idx].classList.add('on')
         })
-
-        mainTabItem.forEach((item)=> {
-            item.classList.remove('on')
-        })
-
-        mainTabItem[idx].classList.add('on')
-        mainTabInner[idx].classList.add('on')
-
-        updateTabPosition()
     })
-})
+});
 
-window.addEventListener('resize', function () {
-    updateTabPosition();
-})
 
 //연혁
 $(function() {

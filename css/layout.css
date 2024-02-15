@@ -716,7 +716,12 @@ html,body {
 
 }
 .office .office_list li{
-
+    cursor: pointer;
+}
+.office .office_box h5{
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3c93;
 }
 
 /* footer */
