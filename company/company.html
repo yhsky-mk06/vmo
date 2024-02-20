@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/vmo/css/layout.css">
     <link rel="stylesheet" href="/vmo/css/aos.css">
     <link rel="stylesheet" href="/vmo/css/swiper.min.css">
+    <link rel="stylesheet" href="/vmo/css/XEIcon/xeicon.css">
 
     <!-- script tag -->
     <script src="/vmo/js/jquery-3.6.0.min.js"></script>
@@ -38,6 +39,8 @@
     <script src="/vmo/js/swiper.min.js"></script>
     <script src="/vmo/js/swiper-bundle.min.js"></script>
     <script src="/vmo/js/common.js"></script>
+    <script src="/vmo/js/sub_common.js"></script>
+    <script src="/vmo/js/sub_company.js"></script>
 
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB58HmKf3DF5SwEx6a2WGbBejc-TpYlZms&callback=initMap&libraries=marker&v=beta"></script>
 </head>
@@ -46,7 +49,7 @@
         <a href="#container" tabindex="0">본문으로 바로가기</a>
         <a href="#footer" tabindex="0">푸터 하단 바로가기</a>
     </div>
-    <div id="wrap" class="main">
+    <div id="wrap" class="sub">
         <header id="header" class="header">
             <div class="top_menu">
                 <ul>
@@ -101,14 +104,14 @@
                             </div>
                         </li>
                         <li class="dep-1">
-                            <a href="#none" class="main_gnb">
+                            <a href="/vmo/brand/brand.html" class="main_gnb">
                                 <span>브랜드</span>
                             </a>
                             <div class="sub_gnb_box">
                                 <ul class="dep-2-box">
                                     <li class="dep-2">
                                         <a href="#none">
-                                            <span>ISM</span>
+                                            <span>비츠온</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
@@ -118,7 +121,7 @@
                                     </li>
                                     <li class="dep-2">
                                         <a href="#none">
-                                            <span>ISVM</span>
+                                            <span>홈빛</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -178,7 +181,7 @@
         </header>
         <main class="container" id="container">
             <section class="content">
-                <div class="visual">
+                <div class="visual company">
                     <div class="inner">
                         <div class="sub_title">
                             <h2>회사소개</h2>
@@ -188,7 +191,7 @@
                 <aside class="sub_left_menu fixed">
                     <ul class="sub_left_menu_list">
                         <li>
-                            <a href="mssage">인사말</a>
+                            <a href="mssage">인사말</a> <!-- 클릭하면 해당 컨텐츠로 이동 -->
                         </li>
                         <li>
                             <a href="history">연혁</a>
@@ -299,62 +302,117 @@
                 <section class="office">
                     <div class="inner">
                         <div class="office_box">
-                            <h5>영업소 안내</h5>
-                            <p>수도권 및 도시 영업소, 전국 대리점 운영으로 고객 중심의 맞춤 서비스를 구축하였습니다.</p>
-                            <ul class="office_list">
-                                <li class="office_tab">본    사</li>
-                                <li class="office_tab">대구 영업소</li>
-                                <li class="office_tab">호남 영업소</li>
-                                <li class="office_tab">부산 영업소</li>
-                                <li class="office_tab">중부 영업소</li>
-                                <li class="office_tab">강원 물류센터</li>
-                                <li class="office_tab">제주 영업소</li>
-                            </ul>
-                            <div class="office_info office_info_head">
-                                <strong>본   사</strong>
-                                <p>경기도 남양주시 진접읍 팔야산단로 12번길 55</p>
-                                <div>담당지역 : 서울 / 경기 / 인천 / 충청 / 강원</div>
+                            <h5 data-aos="fade-up">영업소 안내</h5>
+                            <p class="office_sub_tit" data-aos="fade-up">수도권 및 도시 영업소, 전국 대리점 운영으로 고객 중심의 맞춤 서비스를 구축하였습니다.</p>
+                            <div class="office_list_wrap" data-aos="fade-up">
+                                <div class="office_list_effect_box">
+                                    <div class="office_list_effect"><span class="hidden">현재위치</span></div>
+                                </div>
+                                <ul class="office_list">
+                                    <li class="office_tab on">본    사</li>
+                                    <li class="office_tab">대구 영업소</li>
+                                    <li class="office_tab">호남 영업소</li>
+                                    <li class="office_tab">부산 영업소</li>
+                                    <li class="office_tab">중부 영업소</li>
+                                    <li class="office_tab">강원 물류센터</li>
+                                    <li class="office_tab">제주 영업소</li>
+                                </ul>
                             </div>
-                            <div class="office_info office_info_daegu">
-                                <strong>대구 영업소</strong>
-                                <p>대표전화 : 053-215-8161</p>
-                                <div>담당지역 : 대구 / 구미 / 포항 / 안동 / 영주</div>
-                            </div>
-                            <div class="office_info office_info_honam">
-                                <strong>호남 영업소</strong>
-                                <p>대표전화 : 061-392-7080</p>
-                                <div>담당지역 : 광주 / 광양 / 순천 / 여수 / 목포 / 전주 / 정읍</div>
-                            </div>
-                            <div class="office_info office_info_busan">
-                                <strong>부산 영업소</strong>
-                                <p>대표전화 : 055-345-5819</p>
-                                <div>담당지역 : 부산 / 마산 / 창원 / 김해 / 양산 / 밀양 / 진주 / 거제 / 사천 / 통영</div>
-                            </div>
-                            <div class="office_info office_info_central">
-                                <strong>중부 영업소</strong>
-                                <p>대표전화 : 041-960-3480</p>
-                                <div>담당지역 : 대전 / 영동 / 논산 / 조치원 / 청주 / 천안 / 아산 / 익산 / 군산</div>
-                            </div>
-                            <div class="office_info office_info_gangwon">
-                                <strong>강원 물류센터</strong>
-                                <p>대표전화 : 033-345-8555</p>
-                                <div>담당지역 : 강원 전 지역</div>
-                            </div>
-                            <div class="office_info office_info_jeju">
-                                <strong>제주 영업소</strong>
-                                <p>대표전화 : 031-573-8596</p>
-                                <div>담당지역 : 제주 전 지역</div>
+                            <div class="office_info_wrap" data-aos="fade-up">
+                                <div class="office_info office_info_head on">
+                                    <div class="office_thumb">본사</div>
+                                    <div class="office_info_txt_wrap">
+                                        <strong>본&nbsp;&nbsp;&nbsp;사</strong>
+                                        <p class="office_info_txt">경기도 남양주시 진접읍 팔야산단로 12번길 55</p>
+                                        <div class="office_info_area">담당지역 : 서울 / 경기 / 인천 / 충청 / 강원</div>
+                                    </div>
+                                </div>
+                                <div class="office_info office_info_daegu">
+                                    <div class="office_thumb">대구 영업소</div>
+                                    <div class="office_info_txt_wrap">
+                                        <strong>대구 영업소</strong>
+                                        <p class="office_info_txt">대표전화 : 053-215-8161</p>
+                                        <div class="office_info_area">담당지역 : 대구 / 구미 / 포항 / 안동 / 영주</div>
+                                    </div>
+                                </div>
+                                <div class="office_info office_info_honam">
+                                    <div class="office_thumb">호남 영업소</div>
+                                    <div class="office_info_txt_wrap">
+                                        <strong>호남 영업소</strong>
+                                        <p class="office_info_txt">대표전화 : 061-392-7080</p>
+                                        <div class="office_info_area">담당지역 : 광주 / 광양 / 순천 / 여수 / 목포 / 전주 / 정읍</div>
+                                    </div>
+                                </div>
+                                <div class="office_info office_info_busan">
+                                    <div class="office_thumb">부산 영업소</div>
+                                    <div class="office_info_txt_wrap">
+                                        <strong>부산 영업소</strong>
+                                        <p class="office_info_txt">대표전화 : 055-345-5819</p>
+                                        <div class="office_info_area">담당지역 : 부산 / 마산 / 창원 / 김해 / 양산 / 밀양 / 진주 / 거제 / 사천 / 통영</div>
+                                    </div>
+                                </div>
+                                <div class="office_info office_info_central">
+                                    <div class="office_thumb">중부 영업소</div>
+                                    <div class="office_info_txt_wrap">
+                                        <strong>중부 영업소</strong>
+                                        <p class="office_info_txt">대표전화 : 041-960-3480</p>
+                                        <div class="office_info_area">담당지역 : 대전 / 영동 / 논산 / 조치원 / 청주 / 천안 / 아산 / 익산 / 군산</div>
+                                    </div>
+                                </div>
+                                <div class="office_info office_info_gangwon">
+                                    <div class="office_thumb">강원 물류센터</div>
+                                    <div class="office_info_txt_wrap">
+                                        <strong>강원 물류센터</strong>
+                                        <p class="office_info_txt">대표전화 : 033-345-8555</p>
+                                        <div class="office_info_area">담당지역 : 강원 전 지역</div>
+                                    </div>
+                                </div>
+                                <div class="office_info office_info_jeju">
+                                    <div class="office_thumb">제주 영업소</div>
+                                    <div class="office_info_txt_wrap">
+                                        <strong>제주 영업소</strong>
+                                        <p class="office_info_txt">대표전화 : 051-573-8596</p>
+                                        <div class="office_info_area">담당지역 : 제주 전 지역</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section class="map">
                     <div class="inner">
-                        <div class="map_box">
+                        <div class="map_box" data-aos="fade-up">
+                            <h5 data-aos="fade-up">회사위치</h5>
                             <div class="map_wrap" id="map_wrap" style="height:600px;"></div>
                         </div>
                     </div>
                 </section>
+
+                <script>
+                    var isEmpty = function (value) {
+                        if (value == "false" || value == 0 || value == "" || value == null || value == undefined || (value != null && typeof value == "object" && !Object.keys(value).length)) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    };
+
+                    // 앵커 링크
+                    var pathname = $(location).attr('pathname');
+                    var anchor_match = pathname.match(/\/company\/([^/]*)/);
+                    console.log('anchor_match', anchor_match[1]);
+
+                    if (!isEmpty(anchor_match[1])) {
+                        anchor = anchor_match[1]; // 값이 있으면 배열로 리턴되므로 두번째값에 적용
+                        var anchor_target = $('.' + anchor);
+                        if (anchor_target.length > 0) {
+                            var offset = anchor_target.offset();
+                            $('html, body').animate({
+                                scrollTop: offset.top - 100
+                            }, 400);
+                        }
+                    }
+                </script>
             </section>
         </main>
     </div>

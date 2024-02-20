@@ -12,15 +12,24 @@ $(function () {
 
     function scrollHandler() {
         let to = $(window).scrollTop();
-        fixed(to);
+        //fixed(to);
         right_top_button(to);
     }
 
-    function fixed(to) {
-        (to > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed"),
-            (to > 50) ? $("#wrap").addClass("move") : $("#wrap").removeClass("move");
-        return;
-    }
+    // function fixed(to) {
+    //     (to > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed");
+    //     (to > 148) ? $("#header").addClass("up") : $("#header").removeClass("up");
+    //     return;
+    //
+    //     // if (st > lastScrollTop && st > navbarHeight) {
+    //     //         // Scroll Down
+    //     //         if (!$(".header").hasClass("fixed")) {
+    //     //             $(".header").addClass("up");
+    //     //         }
+    //     //     }
+    //
+    //
+    // }
 
     //top 버튼
     function right_top_button(to) {
@@ -37,6 +46,46 @@ $(function () {
         duration: 1200
     });
 });
+
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $(".header").outerHeight();
+
+$(window).scroll(function (event) {
+    didScroll = true;
+});
+setInterval(function () {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    console.log("위치값", st);
+
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+
+    lastScrollTop = st;
+
+    (st > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed");
+    return;
+
+    if (st > lastScrollTop && st > navbarHeight) {
+
+        // Scroll Down
+        if (!$(".header").hasClass("fixed")) {
+            $(".header").addClass("up");
+        }
+    } else {
+        if (st + $(window).height() < $(document).height()) {
+            $(".header").removeClass("up").removeClass("fixed");
+        }
+    }
+}
 
 $(document).ready(function(){
     // 메인 비주얼 스와이퍼
@@ -95,191 +144,3 @@ $(window).on('load', function () {
 
 
 
-// 서브 왼쪽 메뉴 스크롤 이벤트
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $(".header").outerHeight();
-
-$(window).scroll(function (event) {
-    didScroll = true;
-});
-setInterval(function () {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
-
-function hasScrolled() {
-    var st = $(this).scrollTop();
-
-    console.log("위치값", st);
-
-    if (Math.abs(lastScrollTop - st) <= delta) return;
-
-    if (st > lastScrollTop && st > navbarHeight) {
-        // Scroll Down
-        if (!$(".header").hasClass("fixed")) {
-            $(".header").addClass("up");
-        }
-    }
-
-    lastScrollTop = st;
-}
-
-
-$(function() {
-    $(".sub_left_menu").hide();
-    $(".sub_left_menu").addClass("fixed");
-
-
-    $(".sub_left_menu .sub_left_menu_list a").click(function(event) {
-        event.preventDefault();
-        //console.log(".sub_left_menu .sub_left_menu_list a");
-        var anchor = $(this).attr("href");
-        var anchor_target = $('.' + anchor);
-        if (anchor_target.length > 0) {
-            var offset = anchor_target.offset();
-            $('html, body').animate({
-                scrollTop: offset.top - 100
-            }, 200);
-        }
-    });
-
-    $(window).scroll(function() {
-        var scrollTop = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        var documentHeight = $(document).height();
-        var heightOffset = windowHeight / 2; // 현재 윈도우 높이의 반 값
-
-        if (scrollTop + windowHeight >= documentHeight - heightOffset) {
-            $(".sub_left_menu").fadeOut();
-        } else {
-            if (scrollTop > 50) {
-                $(".sub_left_menu").fadeIn();
-            } else {
-                $(".sub_left_menu").fadeOut();
-            }
-        }
-    });
-
-    $(window).scroll(function() {
-        var scrollPosition = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        var heightOffset = windowHeight / 2; // 현재 윈도우 높이의 반 값
-
-        $(".content section").each(function() {
-            var sectionTop = $(this).offset().top;
-            var sectionHeight = $(this).outerHeight();
-
-            if (scrollPosition >= sectionTop - heightOffset && scrollPosition < sectionTop + sectionHeight - heightOffset) {
-                var currentVisibleId = $(this).attr("class");
-                console.log("현재 보여지는 영역의 class:", currentVisibleId);
-                // currentVisibleId의 값을 href 속성값으로 갖고 있는 요소에 클래스 추가
-                $(".sub_left_menu_list li").removeClass("on");
-                $(".sub_left_menu_list a[href='" + currentVisibleId + "']").parent().addClass("on");
-
-                return false; // 현재 보여지는 영역을 찾았으므로 반복문 종료
-            }
-        });
-    });
-});
-
-
-//서브 영업소 소개
-$(function() {
-    const tabItem = document.querySelectorAll('.office_tab')
-    const tabInner = document.querySelectorAll('.office_info')
-
-    tabItem.forEach((tab, idx)=> {
-        tab.addEventListener('click', function(){
-            tabInner.forEach((inner)=> {
-                inner.classList.remove('on')
-            })
-
-            tabItem.forEach((item)=> {
-                item.classList.remove('on')
-            })
-
-            tabItem[idx].classList.add('on')
-            tabItem[idx].classList.add('on')
-        })
-    })
-});
-
-
-//연혁
-$(function() {
-    var items = $(".history_box li"),
-        timelineHeight = $(".history_box ul").height(),
-        greyLine = $('.default-line'),
-        lineToDraw = $('.draw-line');
-
-    if(lineToDraw.length) {
-        $(window).on('scroll', function () {
-
-            var redLineHeight = lineToDraw.height(),
-                greyLineHeight = greyLine.height(),
-                windowDistance = $(window).scrollTop(),
-                windowHeight = $(window).height() / 2,
-                timelineDistance = $(".history_box").offset().top;
-
-            if(windowDistance >= timelineDistance - windowHeight) {
-                line = windowDistance - timelineDistance + windowHeight;
-
-                if(line <= greyLineHeight) {
-                    lineToDraw.css({
-                        'height' : line + 20 + 'px'
-                    });
-                }
-            }
-
-            var bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
-            items.each(function(index){
-                var circlePosition = $(this).offset();
-
-                if(bottom > circlePosition.top) {
-                    $(this).addClass('in-view');
-                } else {
-                    $(this).removeClass('in-view');
-                }
-            });
-        });
-    }
-});
-
-
-//지도
-function initMap() {
-    const ls = { lat: 37.750253, lng: 127.228944 };
-    const map = new google.maps.Map(document.getElementById("map_wrap"), {
-        center: ls,
-        zoom: 15,
-    });
-
-    const contentString =
-        '<div class="price-tag">' +
-        '일신비츠온' +
-        '</div>';
-
-    const infowindow = new google.maps.InfoWindow({
-        content: contentString,
-        ariaLabel: "일신비츠온",
-    });
-
-    const marker = new google.maps.Marker({
-        position: ls,
-        map,
-        title: "일신비츠온",
-    });
-
-    marker.addListener("click", () => {
-        infowindow.open({
-            anchor: marker,
-            map,
-        });
-    });
-}
-
-window.initMap = initMap;
