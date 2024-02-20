@@ -654,14 +654,14 @@ html,body {
     font: 0/0 a;
     margin:0 auto;
 }
-.mssage_box h1{
+.mssage_box .mssage_tit{
     font-size:24px;
     color: #2c3c93;
     font-weight: bold;
     text-align: center;
     margin:60px 0 0 0;
 }
-.mssage_box h2{
+.mssage_box .mssage_txt{
     font-size:18px;
     letter-spacing: -3px;
     color: #2c3c93;
@@ -691,7 +691,7 @@ html,body {
 .mission_box{
     padding:220px 0 180px;
 }
-.mission_box h3{
+.mission_box .mission_tit{
     font-size:24px;
     font-weight: 700;
     color: #2c3c93;
@@ -797,7 +797,7 @@ html,body {
     font-weight: 700;
     color: #2c3c93;
 }
-.history_box ul li h4{
+.history_box ul li .history_tit{
     display:inline-block;
     color: #fff;
     font-size:24px;
@@ -839,7 +839,7 @@ html,body {
 .office .office_list li{
     cursor: pointer;
 }
-.office .office_box h5{
+.office .office_box .office_tit{
     font-size: 38px;
     font-weight: 700;
     color: #2c3c93;
@@ -1004,9 +1004,9 @@ html,body {
     min-width:200px;
     min-height:100px;
 }
-.vitson .vitson_brand_box h1,
-.mro .mro_brand_box h1,
-.homevit .homevit_brand_box h1{
+.vitson .vitson_brand_box .vitson_brand_tit,
+.mro .mro_brand_box .mro_brand_tit,
+.homevit .homevit_brand_box .homevit_brand_tit{
     font-size: 34px;
     color: #3c3c3c;
     font-weight: 700;
@@ -1130,18 +1130,100 @@ html,body {
     background: url("/images/common/sub_brand_img_03_10.png") no-repeat 0 0;
 }
 
+.sales_box .sales_tit{
+    font-size: 38px;
+    font-weight: 700;
+    color: #2c3c93;
+    margin: 0 0 15px 0;
+}
 .sales_accordion_wrap{
     width:100%;
+    border-top:1px solid #3c3c3c;
 }
 .sales_accordion_wrap .sales_accordion_list{
     width:100%;
-    border-bottom:1px solid #666666;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    flex-direction: column;
+    padding:30px 20px;
 }
-.sales_accordion_tit{
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_tit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_tit p{
+    color: #2c3c93;
+    font-size: 22px;
+    font-weight: 700;
+}
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_tit i{
 
+    font-size:18px;
 }
-.sales_accordion_info{
+.sales_accordion_wrap .sales_accordion_list.open .sales_accordion_tit i{
+    transform: rotate(180deg);
+    transition: all 0.4s ease-in-out;
+}
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_info{
     display:none;
+    padding:30px 0 0 0;
+}
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_info li{
+    display:flex;
+    align-items: flex-start;
+    gap: 0 20px;
+    margin:0 0 20px 0;
+}
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_info .accordion_info_tit{
+    font-size:16px;
+    font-weight: 500;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    min-width: 100px;
+}
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_info .accordion_info_tit i{
+    color: #666666;
+    font-size:18px;
+}
+.sales_accordion_wrap .sales_accordion_list .sales_accordion_info .accordion_info_txt{
+    font-size:16px;
+    color: #7c7c7d;
+}
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_list{
+    display:flex;
+    align-items: baseline;
+    gap: 0 10px;
+}
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_01,
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_02,
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_03,
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_04{
+    font-size:14px;
+    color: #454545;
+    padding:3px 5px;
+}
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_01{
+    background-color: #d2e6f3;
+}
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_02{
+    background-color: #c3f3c6;
+}
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_03{
+    background-color: #f7eac2;
+}
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_tit_04{
+    background-color: #d3c9f3;
+}
+.sales_accordion_wrap .sales_accordion_list .accordion_info_area .accordion_area_txt{
+    font-size:14px;
+    line-height: 2;
+    color: #7c7c7d;
+    padding:3px 5px;
 }
 
 /* footer */
