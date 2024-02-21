@@ -1,35 +1,13 @@
 $(function () {
 
     // 메인 헤더 스크롤
-    // $(window).on("load", loadHandler);
     $(window).on("scroll", scrollHandler);
-
-    // function loadHandler() {
-    //     let to = $(window).scrollTop();
-    //     fixed(to);
-    //     right_top_button(to);
-    // }
 
     function scrollHandler() {
         let to = $(window).scrollTop();
         //fixed(to);
         right_top_button(to);
     }
-
-    // function fixed(to) {
-    //     (to > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed");
-    //     (to > 148) ? $("#header").addClass("up") : $("#header").removeClass("up");
-    //     return;
-    //
-    //     // if (st > lastScrollTop && st > navbarHeight) {
-    //     //         // Scroll Down
-    //     //         if (!$(".header").hasClass("fixed")) {
-    //     //             $(".header").addClass("up");
-    //     //         }
-    //     //     }
-    //
-    //
-    // }
 
     //top 버튼
     function right_top_button(to) {
@@ -47,45 +25,68 @@ $(function () {
     });
 });
 
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $(".header").outerHeight();
+/* 헤더와 gnb */
+$(function () {
+    $(".header .gnb_box").mouseenter(function () {
+        $(".header").addClass("active");
 
-$(window).scroll(function (event) {
-    didScroll = true;
+        if ($(".header").hasClass("active")) {
+            $(".header").removeClass("transparent");
+        }
+    });
+    $(".header").mouseleave(function () {
+        $(".header").removeClass("active");
+    });
+
+    var didScroll;
+    var lastScrollTop = 0;
+    var navbarHeight = $(".header").outerHeight();
+
+    console.log(navbarHeight)
+
+    $(window).scroll(function (event) {
+        didScroll = true;
+    });
+    setInterval(function () {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        console.log("위치값", st);
+
+
+        if (st > lastScrollTop && st > navbarHeight) {
+            console.log(st > lastScrollTop && st > navbarHeight)
+            // Scroll Down
+            if (!$(".header").hasClass("transparent")) {
+                $(".header").addClass("up");
+            }
+        } else {
+            if (st + $(window).height() < $(document).height()) {
+                $(".header").removeClass("up").removeClass("transparent");
+                $(".top_menu").removeClass("on");
+            }
+            if (st <= 5) {
+                if ($(".header").hasClass("header_main")) {
+                    if (!$(".header").hasClass("active")) {
+                        $(".header").addClass("transparent");
+                        $(".top_menu").addClass("on");
+                    }
+                }
+            }
+        }
+
+        lastScrollTop = st;
+    }
 });
-setInterval(function () {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
-
-    console.log("위치값", st);
-
-    if (Math.abs(lastScrollTop - st) <= delta) return;
-
-    lastScrollTop = st;
-
-    (st > 50) ? $("#header").addClass("fixed") : $("#header").removeClass("fixed");
-    return;
-
-    if (st > lastScrollTop && st > navbarHeight) {
-
-        // Scroll Down
-        if (!$(".header").hasClass("fixed")) {
-            $(".header").addClass("up");
-        }
-    } else {
-        if (st + $(window).height() < $(document).height()) {
-            $(".header").removeClass("up").removeClass("fixed");
-        }
-    }
-}
 
 $(document).ready(function(){
     // 메인 비주얼 스와이퍼
@@ -127,6 +128,7 @@ $(document).ready(function(){
 
     //네비게이션
     var nav_dep = ".dep-1";
+    var nav_sub_gnb = ".dep-2";
 
     // 호버
     $(nav_dep).hover(function(){
@@ -134,6 +136,10 @@ $(document).ready(function(){
     },function(){
         $(this).removeClass("hover");
     });
+
+    $(nav_sub_gnb).hover(function (){
+        $(this).parents(nav_dep).addClass("hover");
+    })
 });
 
 //aos 리턴
