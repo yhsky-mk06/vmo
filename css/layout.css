@@ -156,23 +156,23 @@ html,body {
     filter: brightness(1);
 }
 .header .top_menu ul li:nth-child(1) a:before{
-    background-image: url("/images/icon/top_menu_icon_01.png");
+    background-image: url("/vmo/images/icon/top_menu_icon_01.png");
     background-position: center 1px;
 }
 .header .top_menu ul li:nth-child(2) a:before{
-    background-image: url("/images/icon/top_menu_icon_02.png");
+    background-image: url("/vmo/images/icon/top_menu_icon_02.png");
     background-position: center 1px;
 }
 .header .top_menu ul li:nth-child(3) a:before{
-    background-image: url("/images/icon/top_menu_icon_03.png");
+    background-image: url("/vmo/images/icon/top_menu_icon_03.png");
     margin-top: -2px;
 }
 .header .top_menu ul li:nth-child(4) a:before{
-    background-image: url("/images/icon/top_menu_icon_04.png");
+    background-image: url("/vmo/images/icon/top_menu_icon_04.png");
     margin-top: -2px;
 }
 .header .top_menu ul li:nth-child(5) a:before{
-    background-image: url("/images/icon/top_menu_icon_05.png");
+    background-image: url("/vmo/images/icon/top_menu_icon_05.png");
 }
 
 /* gnb */
@@ -499,28 +499,28 @@ html,body {
     border-radius: 20px;
 }
 .main_handling_box .handling_list li:nth-child(1) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_01.png');
+    background-image: url('/vmo/images/common/main_handling_bg_01.png');
 }
 .main_handling_box .handling_list li:nth-child(2) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_02.png');
+    background-image: url('/vmo/images/common/main_handling_bg_02.png');
 }
 .main_handling_box .handling_list li:nth-child(3) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_03.png');
+    background-image: url('/vmo/images/common/main_handling_bg_03.png');
 }
 .main_handling_box .handling_list li:nth-child(4) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_04.png');
+    background-image: url('/vmo/images/common/main_handling_bg_04.png');
 }
 .main_handling_box .handling_list li:nth-child(5) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_05.png');
+    background-image: url('/vmo/images/common/main_handling_bg_05.png');
 }
 .main_handling_box .handling_list li:nth-child(6) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_06.png');
+    background-image: url('/vmo/images/common/main_handling_bg_06.png');
 }
 .main_handling_box .handling_list li:nth-child(7) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_07.png');
+    background-image: url('/vmo/images/common/main_handling_bg_07.png');
 }
 .main_handling_box .handling_list li:nth-child(8) div{
-    background-image: url('/vmo/vmo/images/common/main_handling_bg_08.png');
+    background-image: url('/vmo/images/common/main_handling_bg_08.png');
 }
 .main_handling_box .handling_list li i{
     background-repeat: no-repeat;
@@ -612,7 +612,7 @@ html,body {
     margin:15px 0 0 0;
 }
 .main_network_box .network_list{
-    background: url("/vmo/vmo/images/common/main_network_map_bg.png") no-repeat right top;
+    background: url("/vmo/images/common/main_network_map_bg.png") no-repeat right top;
     background-size: auto;
     padding:130px 0 130px 0;
     display:flex;
