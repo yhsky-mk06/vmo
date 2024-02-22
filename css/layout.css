@@ -78,7 +78,7 @@ html,body {
     display:block;
     width:22px;
     height:22px;
-    background: url("../images/icon/right_top.svg") no-repeat 0 0;
+    background: url("/vmo/images/icon/right_top.svg") no-repeat 0 0;
     background-size: 22px;
     position: absolute;
     top:50%;
@@ -499,28 +499,28 @@ html,body {
     border-radius: 20px;
 }
 .main_handling_box .handling_list li:nth-child(1) div{
-    background-image: url('../images/common/main_handling_bg_01.png');
+    background-image: url('/vmo/images/common/main_handling_bg_01.png');
 }
 .main_handling_box .handling_list li:nth-child(2) div{
-    background-image: url('../images/common/main_handling_bg_02.png');
+    background-image: url('/vmo/images/common/main_handling_bg_02.png');
 }
 .main_handling_box .handling_list li:nth-child(3) div{
-    background-image: url('../images/common/main_handling_bg_03.png');
+    background-image: url('/vmo/images/common/main_handling_bg_03.png');
 }
 .main_handling_box .handling_list li:nth-child(4) div{
-    background-image: url('../images/common/main_handling_bg_04.png');
+    background-image: url('/vmo/images/common/main_handling_bg_04.png');
 }
 .main_handling_box .handling_list li:nth-child(5) div{
-    background-image: url('../images/common/main_handling_bg_05.png');
+    background-image: url('/vmo/images/common/main_handling_bg_05.png');
 }
 .main_handling_box .handling_list li:nth-child(6) div{
-    background-image: url('../images/common/main_handling_bg_06.png');
+    background-image: url('/vmo/images/common/main_handling_bg_06.png');
 }
 .main_handling_box .handling_list li:nth-child(7) div{
-    background-image: url('../images/common/main_handling_bg_07.png');
+    background-image: url('/vmo/images/common/main_handling_bg_07.png');
 }
 .main_handling_box .handling_list li:nth-child(8) div{
-    background-image: url('../images/common/main_handling_bg_08.png');
+    background-image: url('/vmo/images/common/main_handling_bg_08.png');
 }
 .main_handling_box .handling_list li i{
     background-repeat: no-repeat;
@@ -531,28 +531,28 @@ html,body {
     background-position: center center;
 }
 .main_handling_box .handling_list li:nth-child(1) i{
-    background-image: url('../images/icon/main_handling_icon_01.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_01.png');
 }
 .main_handling_box .handling_list li:nth-child(2) i{
-    background-image: url('../images/icon/main_handling_icon_02.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_02.png');
 }
 .main_handling_box .handling_list li:nth-child(3) i{
-    background-image: url('../images/icon/main_handling_icon_03.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_03.png');
 }
 .main_handling_box .handling_list li:nth-child(4) i{
-    background-image: url('../images/icon/main_handling_icon_04.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_04.png');
 }
 .main_handling_box .handling_list li:nth-child(5) i{
-    background-image: url('../images/icon/main_handling_icon_05.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_05.png');
 }
 .main_handling_box .handling_list li:nth-child(6) i{
-    background-image: url('../images/icon/main_handling_icon_06.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_06.png');
 }
 .main_handling_box .handling_list li:nth-child(7) i{
-    background-image: url('../images/icon/main_handling_icon_07.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_07.png');
 }
 .main_handling_box .handling_list li:nth-child(8) i{
-    background-image: url('../images/icon/main_handling_icon_08.png');
+    background-image: url('/vmo/images/icon/main_handling_icon_08.png');
 }
 .main_handling_box .handling_list li span{
     font-size:24px;
@@ -612,7 +612,7 @@ html,body {
     margin:15px 0 0 0;
 }
 .main_network_box .network_list{
-    background: url("../images/common/main_network_map_bg.png") no-repeat right top;
+    background: url("/vmo/images/common/main_network_map_bg.png") no-repeat right top;
     background-size: auto;
     padding:130px 0 130px 0;
     display:flex;
