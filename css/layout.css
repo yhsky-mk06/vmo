@@ -467,6 +467,7 @@ html,body {
 }
 .main_handling_box .handling_list li{
     width:24%;
+    position: relative;
 }
 .main_handling_box .handling_list li div{
     width:100%;
