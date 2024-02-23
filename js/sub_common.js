@@ -1,3 +1,11 @@
+var isEmpty = function (value) {
+    if (value == "false" || value == 0 || value == "" || value == null || value == undefined || (value != null && typeof value == "object" && !Object.keys(value).length)) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
 $(function() {
     $(".sub_left_menu").hide();
     $(".sub_left_menu").addClass("fixed");
@@ -54,4 +62,7 @@ $(function() {
     });
 });
 
+$(window).on('load', function () {
+    $(".header").addClass("header_bg");
+});
 

@@ -67,7 +67,8 @@ $(function () {
             // Scroll Down
             if (!$(".header").hasClass("transparent")) {
                 $(".header").addClass("up");
-                $(".header").removeClass("header_bg")
+                $(".header").removeClass("header_bg");
+                $(".header .header_quick").removeClass("on");
             }
         } else {
             if (st + $(window).height() < $(document).height()) {
@@ -90,6 +91,14 @@ $(function () {
 
         lastScrollTop = st;
     }
+
+    //햄버거 메뉴
+    $("header .header_quick").click(function (event) {
+        event.preventDefault();
+        $(this).toggleClass("on");
+        $(".header").toggleClass("active");
+        $(".header").removeClass("transparent");
+    });
 });
 
 
@@ -150,6 +159,31 @@ $(document).ready(function(){
 //aos 리턴
 $(window).on('load', function () {
     AOS.refresh();
+});
+
+window.onload = function () {
+    // .scroll_wrap > .txt > a 태그 클릭 시
+};
+
+$(document).ready(function(){
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOMContentLoaded");
+        // 운영자산 앵커 클릭 시 스크롤 이동
+        var linkElements = document.querySelectorAll(".sub_left_menu .sub_left_menu_list a");
+        linkElements.forEach(function (linkElement) {
+            linkElement.addEventListener("click", function (event) {
+                event.preventDefault();
+                var target = document.querySelector("#" + linkElement.getAttribute("href"));
+                var targetTop = target.offsetTop;
+                window.scrollTo({
+                    top: targetTop - 75,
+                    behavior: "smooth",
+                });
+            });
+        });
+
+        //
+    });
 });
 
 

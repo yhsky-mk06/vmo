@@ -43,6 +43,11 @@
     <script src="/vmo/js/sub_company.js"></script>
 
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB58HmKf3DF5SwEx6a2WGbBejc-TpYlZms&callback=initMap&libraries=marker&v=beta"></script>
+
+    /* <![CDATA[ */
+    var wpml_cookies = {"wp-wpml_current_language":{"value":"ko","expires":1,"path":"\/"}};
+    var wpml_cookies = {"wp-wpml_current_language":{"value":"ko","expires":1,"path":"\/"}};
+    /* ]]> */
 </head>
 <body>
     <div id="nav-skip" class="hidden">
@@ -81,22 +86,22 @@
                             <div class="sub_gnb_box">
                                 <ul class="dep-2-box">
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/company/mssage">
                                             <span>인사말</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/company/history">
                                             <span>연혁</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/company/office">
                                             <span>영업소안내</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/company/map">
                                             <span>회사위치</span>
                                         </a>
                                     </li>
@@ -110,17 +115,17 @@
                             <div class="sub_gnb_box">
                                 <ul class="dep-2-box">
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/brand/vitson">
                                             <span>비츠온</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/brand/mro">
                                             <span>비츠온 MRO</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/brand/homevit">
                                             <span>홈빛</span>
                                         </a>
                                     </li>
@@ -134,8 +139,13 @@
                             <div class="sub_gnb_box">
                                 <ul class="dep-2-box">
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/sales/sales">
                                             <span>영업팀 안내</span>
+                                        </a>
+                                    </li>
+                                    <li class="dep-2">
+                                        <a href="/vmo/sales/office">
+                                            <span>영업소 안내</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -148,22 +158,22 @@
                             <div class="sub_gnb_box">
                                 <ul class="dep-2-box">
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/customer/customer.html#register">
                                             <span>고객센터</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/customer/customer.html#status">
                                             <span>A/S 접수</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/customer/customer.html#job">
                                             <span>처리현황</span>
                                         </a>
                                     </li>
                                     <li class="dep-2">
-                                        <a href="#none">
+                                        <a href="/vmo/customer/customer.html#info">
                                             <span>인재채용</span>
                                         </a>
                                     </li>
@@ -177,6 +187,12 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="header_quick">
+                    <button type="button" class="header_btn" id="header_btn">
+                        <span class="header_lines"></span>
+                        전체 메뉴 열기
+                    </button>
+                </div>
             </div>
         </header>
         <main class="container" id="container">
@@ -389,18 +405,11 @@
                 </section>
 
                 <script>
-                    var isEmpty = function (value) {
-                        if (value == "false" || value == 0 || value == "" || value == null || value == undefined || (value != null && typeof value == "object" && !Object.keys(value).length)) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    };
-
                     // 앵커 링크
                     var pathname = $(location).attr('pathname');
                     var anchor_match = pathname.match(/\/company\/([^/]*)/);
                     console.log('anchor_match', anchor_match[1]);
+
 
                     if (!isEmpty(anchor_match[1])) {
                         anchor = anchor_match[1]; // 값이 있으면 배열로 리턴되므로 두번째값에 적용
@@ -413,6 +422,22 @@
 
                         }
                     }
+
+                    $(".sub_left_menu .sub_left_menu_list a").click(function(event) {
+                        event.preventDefault();
+                        var anchor = $(this).attr("href");
+                        var anchor_target = $('.' + anchor);
+                        if (anchor_target.length > 0) {
+                            var offset = anchor_target.offset();
+                            $('html, body').animate({
+                                scrollTop: offset.top - 100
+                            }, 400);
+                        }
+
+                        let pathname = $(location).attr('pathname');
+                        pathname = pathname.replace(/\/company\/([^/]*)/, '/company/' + anchor);
+                        history.pushState(null, null, pathname);
+                    });
                 </script>
             </section>
         </main>
