@@ -40,6 +40,7 @@ $(function () {
 
     var didScroll;
     var lastScrollTop = 0;
+    var delta = 5;
     var navbarHeight = $(".header").outerHeight();
 
     console.log(navbarHeight)
@@ -60,6 +61,8 @@ $(function () {
         var st = $(this).scrollTop();
 
         console.log("위치값", st);
+
+        if (Math.abs(lastScrollTop - st) <= delta) return;
 
 
         if (st > lastScrollTop && st > navbarHeight) {
@@ -99,6 +102,20 @@ $(function () {
         $(".header").toggleClass("active");
         $(".header").removeClass("transparent");
     });
+
+    $(".gnb_box .dep-2-box a").click(function(event) {
+
+        event.preventDefault();
+        var anchor = $(this).attr("href");
+        var anchor_target = $('.' + anchor);
+        if (anchor_target.length > 0) {
+            var offset = anchor_target.offset();
+            $('html, body').animate({
+                scrollTop: offset.top - 100
+            }, 400);
+        }
+    });
+
 });
 
 
@@ -161,9 +178,6 @@ $(window).on('load', function () {
     AOS.refresh();
 });
 
-window.onload = function () {
-    // .scroll_wrap > .txt > a 태그 클릭 시
-};
 
 $(document).ready(function(){
     document.addEventListener("DOMContentLoaded", function () {
@@ -181,11 +195,15 @@ $(document).ready(function(){
                 });
             });
         });
-
-        //
     });
 });
 
 
-
+var isEmpty = function (value) {
+    if (value == "false" || value == 0 || value == "" || value == null || value == undefined || (value != null && typeof value == "object" && !Object.keys(value).length)) {
+        return true;
+    } else {
+        return false;
+    }
+};
 

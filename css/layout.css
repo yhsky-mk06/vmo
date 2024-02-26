@@ -308,6 +308,13 @@ html,body {
 }
 
 /* 햄버거메뉴 */
+.header.transparent .header_btn .header_lines{
+    background-color: #ffffff;
+}
+.header.transparent .header_btn .header_lines::before,
+.header.transparent .header_btn .header_lines::after{
+    background-color: #ffffff;
+}
 .header_btn{
     flex-shrink:0;
     position:relative;
