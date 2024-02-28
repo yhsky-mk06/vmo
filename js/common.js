@@ -103,7 +103,8 @@ $(function () {
         $(".header").removeClass("transparent");
     });
 
-    $(".gnb_box .dep-2-box a").click(function(event) {
+
+    $(".gnb_box a").click(function(event) {
 
         event.preventDefault();
         var anchor = $(this).attr("href");
@@ -114,7 +115,14 @@ $(function () {
                 scrollTop: offset.top - 100
             }, 400);
         }
+
+        let pathname = $(location).attr('pathname');
+        pathname = pathname.replace(anchor);
+        history.pushState(null, null, anchor);
+
+        console.log('anchor_match_nav', anchor);
     });
+
 
 });
 
