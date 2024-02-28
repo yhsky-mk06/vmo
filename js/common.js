@@ -104,7 +104,7 @@ $(function () {
     });
 
 
-    $(".gnb_box a").click(function(event) {
+    $(".sub_gnb_box a").click(function(event) {
 
         event.preventDefault();
         var anchor = $(this).attr("href");
