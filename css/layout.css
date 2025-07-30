@@ -78,7 +78,7 @@ html,body {
     display:block;
     width:22px;
     height:22px;
-    background: url("/vmo/images/icon/right_top.svg") no-repeat 0 0;
+    background: url("../images/icon/right_top.svg") no-repeat 0 0;
     background-size: 22px;
     position: absolute;
     top:50%;
@@ -156,23 +156,23 @@ html,body {
     filter: brightness(1);
 }
 .header .top_menu ul li:nth-child(1) a:before{
-    background-image: url("/vmo/images/icon/top_menu_icon_01.png");
+    background-image: url("../images/icon/top_menu_icon_01.png");
     background-position: center 1px;
 }
 .header .top_menu ul li:nth-child(2) a:before{
-    background-image: url("/vmo/images/icon/top_menu_icon_02.png");
+    background-image: url("../images/icon/top_menu_icon_02.png");
     background-position: center 1px;
 }
 .header .top_menu ul li:nth-child(3) a:before{
-    background-image: url("/vmo/images/icon/top_menu_icon_03.png");
+    background-image: url("../images/icon/top_menu_icon_03.png");
     margin-top: -2px;
 }
 .header .top_menu ul li:nth-child(4) a:before{
-    background-image: url("/vmo/images/icon/top_menu_icon_04.png");
+    background-image: url("../images/icon/top_menu_icon_04.png");
     margin-top: -2px;
 }
 .header .top_menu ul li:nth-child(5) a:before{
-    background-image: url("/vmo/images/icon/top_menu_icon_05.png");
+    background-image: url("../images/icon/top_menu_icon_05.png");
 }
 
 /* gnb */
@@ -567,28 +567,28 @@ html,body {
     border-radius: 20px;
 }
 .main_handling_box .handling_list li:nth-child(1) div{
-    background-image: url('/vmo/images/common/main_handling_bg_01.png');
+    background-image: url('../images/common/main_handling_bg_01.png');
 }
 .main_handling_box .handling_list li:nth-child(2) div{
-    background-image: url('/vmo/images/common/main_handling_bg_02.png');
+    background-image: url('../images/common/main_handling_bg_02.png');
 }
 .main_handling_box .handling_list li:nth-child(3) div{
-    background-image: url('/vmo/images/common/main_handling_bg_03.png');
+    background-image: url('../images/common/main_handling_bg_03.png');
 }
 .main_handling_box .handling_list li:nth-child(4) div{
-    background-image: url('/vmo/images/common/main_handling_bg_04.png');
+    background-image: url('../images/common/main_handling_bg_04.png');
 }
 .main_handling_box .handling_list li:nth-child(5) div{
-    background-image: url('/vmo/images/common/main_handling_bg_05.png');
+    background-image: url('../images/common/main_handling_bg_05.png');
 }
 .main_handling_box .handling_list li:nth-child(6) div{
-    background-image: url('/vmo/images/common/main_handling_bg_06.png');
+    background-image: url('../images/common/main_handling_bg_06.png');
 }
 .main_handling_box .handling_list li:nth-child(7) div{
-    background-image: url('/vmo/images/common/main_handling_bg_07.png');
+    background-image: url('../images/common/main_handling_bg_07.png');
 }
 .main_handling_box .handling_list li:nth-child(8) div{
-    background-image: url('/vmo/images/common/main_handling_bg_08.png');
+    background-image: url('../images/common/main_handling_bg_08.png');
 }
 .main_handling_box .handling_list li i{
     background-repeat: no-repeat;
@@ -599,28 +599,28 @@ html,body {
     background-position: center center;
 }
 .main_handling_box .handling_list li:nth-child(1) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_01.png');
+    background-image: url('../images/icon/main_handling_icon_01.png');
 }
 .main_handling_box .handling_list li:nth-child(2) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_02.png');
+    background-image: url('../images/icon/main_handling_icon_02.png');
 }
 .main_handling_box .handling_list li:nth-child(3) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_03.png');
+    background-image: url('../images/icon/main_handling_icon_03.png');
 }
 .main_handling_box .handling_list li:nth-child(4) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_04.png');
+    background-image: url('../images/icon/main_handling_icon_04.png');
 }
 .main_handling_box .handling_list li:nth-child(5) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_05.png');
+    background-image: url('../images/icon/main_handling_icon_05.png');
 }
 .main_handling_box .handling_list li:nth-child(6) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_06.png');
+    background-image: url('../images/icon/main_handling_icon_06.png');
 }
 .main_handling_box .handling_list li:nth-child(7) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_07.png');
+    background-image: url('../images/icon/main_handling_icon_07.png');
 }
 .main_handling_box .handling_list li:nth-child(8) i{
-    background-image: url('/vmo/images/icon/main_handling_icon_08.png');
+    background-image: url('../images/icon/main_handling_icon_08.png');
 }
 .main_handling_box .handling_list li span{
     font-size:24px;
@@ -680,7 +680,7 @@ html,body {
     margin:15px 0 0 0;
 }
 .main_network_box .network_list{
-    background: url("/vmo/images/common/main_network_map_bg.png") no-repeat right top;
+    background: url("../images/common/main_network_map_bg.png") no-repeat right top;
     background-size: auto;
     padding:130px 0 130px 0;
     display:flex;
@@ -742,6 +742,17 @@ html,body {
     font-size:14px;
     color: #454545;
 }
+.main_notice_box .notice_list_box .notice_list_slide .notice_list_img{
+    overflow: hidden;
+    height: 187px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+.main_notice_box .notice_list_box .notice_list_slide .notice_list_img img{
+    min-height: 187px;
+    object-fit: cover;
+    max-height: 100%;
+}
 
 /* sub */
 .sub .content{
@@ -761,7 +772,7 @@ html,body {
 }
 .visual.company:before{
     content: "";
-    background: url("/vmo/images/common/sub_visual_top_img_01.jpg")no-repeat center center;
+    background: url("https://www.vitsonimg.co.kr/images/homepage/sub_visual_top_img_01.jpg")no-repeat center center;
     background-size: cover;
     animation: visualScale 8s linear alternate both;
     width:115%;
@@ -772,7 +783,7 @@ html,body {
 }
 .visual.brand:before{
     content: "";
-    background: url("/vmo/images/common/sub_visual_top_img_02.jpg")no-repeat center center;
+    background: url("https://www.vitsonimg.co.kr/images/homepage/sub_visual_top_img_02.jpg")no-repeat center center;
     background-size: cover;
     animation: visualScale 8s linear alternate both;
     width:115%;
@@ -783,7 +794,7 @@ html,body {
 }
 .visual.sales:before{
     content: "";
-    background: url("/vmo/images/common/sub_visual_top_img_03.jpg")no-repeat center center;
+    background: url("../images/common/sub_visual_top_img_03.jpg")no-repeat center center;
     background-size: cover;
     animation: visualScale 8s linear alternate both;
     width:115%;
@@ -794,7 +805,7 @@ html,body {
 }
 .visual.customer:before{
     content: "";
-    background: url("/vmo/images/common/sub_visual_top_img_04.jpg")no-repeat center center;
+    background: url("https://www.vitsonimg.co.kr/images/homepage/sub_visual_top_img_04.jpg")no-repeat center center;
     background-size: cover;
     animation: visualScale 8s linear alternate both;
     width:115%;
@@ -845,30 +856,30 @@ html,body {
         transform: scale(1) rotate(0deg);
     }
 }
-.mssage{
-    background: url("/vmo/images/common/sub_mission_bg.png") no-repeat center top;
-}
-.mssage_box{
+.message{
+    background: url("https://www.vitsonimg.co.kr/images/homepage/sub_mission_bg.png") no-repeat center top;
+} 
+.message_box{
     padding:100px 0 220px;
     margin:0 auto;
 }
-.mssage_box .mssage_logo{
+.message_box .message_logo{
     display:block;
-    background: url('/vmo/images/common/sub_mission_logo.png') no-repeat center center;
+    background: url('../images/common/sub_mission_logo.png') no-repeat center center;
     background-size: 220px auto;
     min-width:220px;
     height:210px;
     font: 0/0 a;
     margin:0 auto;
 }
-.mssage_box .mssage_tit{
+.message_box .message_tit{
     font-size:24px;
     color: #2c3c93;
     font-weight: bold;
     text-align: center;
     margin:60px 0 0 0;
 }
-.mssage_box .mssage_txt{
+.message_box .message_txt{
     font-size:18px;
     letter-spacing: -3px;
     color: #2c3c93;
@@ -877,20 +888,20 @@ html,body {
     margin:30px auto 0;
     line-height:2;
 }
-.mssage_box .ceo{
+.message_box .ceo{
     margin:80px auto 0;
     display:flex;
     gap: 0 15px;
     align-items: flex-end;
     justify-content: center;
 }
-.mssage_box .ceo span{
+.message_box .ceo span{
     font-size:18px;
     font-weight: 500;
     color: #2c3c93;
     margin: 0 0 2px 0;
 }
-.mssage_box .ceo em{
+.message_box .ceo em{
     font-size:28px;
     font-weight: 500;
     color: #2c3c93;
@@ -1142,25 +1153,31 @@ html,body {
     font: 0/0 a;
 }
 .office_info_wrap .office_info.office_info_head .office_thumb{
-    background: url("/vmo/images/common/sub_office_info_bg_01.png") no-repeat 0 0;
+    background: url("../images/common/sub_office_info_bg_01.png") no-repeat 0 0;
 }
 .office_info_wrap .office_info.office_info_daegu .office_thumb{
-    background: url("/vmo/images/common/sub_office_info_bg_02.png") no-repeat 0 0;
+    background: url("../images/common/sub_office_info_bg_02.png") no-repeat 0 0;
 }
 .office_info_wrap .office_info.office_info_honam .office_thumb{
-    background: url("/vmo/images/common/sub_office_info_bg_03.png") no-repeat 0 0;
+    background: url("../images/common/sub_office_info_bg_03.png") no-repeat 0 0;
 }
 .office_info_wrap .office_info.office_info_busan .office_thumb{
-    background: url("/vmo/images/common/sub_office_info_bg_04.png") no-repeat 0 0;
+    background: url("../images/common/sub_office_info_bg_04.png?v=240419") no-repeat;
+    background-size: 140% auto;
+    background-position: 72% center;
+    background-color: #f1f1f1;
 }
 .office_info_wrap .office_info.office_info_central .office_thumb{
-    background: url("/vmo/images/common/sub_office_info_bg_05.png") no-repeat 0 0;
+    background: url("https://www.vitsonimg.co.kr/images/homepage/sub_office_info_bg_05.png?v=240419") no-repeat;
+    background-size: 130% auto;
+    background-position: 8% center;
+    background-color: #f1f1f1;
 }
 .office_info_wrap .office_info.office_info_gangwon .office_thumb{
-    background: url("/vmo/images/common/sub_office_info_bg_06.png") no-repeat 0 0;
+    background: url("../images/common/sub_office_info_bg_06.png") no-repeat 0 0;
 }
 .office_info_wrap .office_info.office_info_jeju .office_thumb{
-    background: url("/vmo/images/common/sub_office_info_bg_07.png") no-repeat 0 0;
+    background: url("../images/common/sub_office_info_bg_07.png") no-repeat 0 0;
 }
 /*.office_info_wrap .office_info .map_box{*/
 /*    margin:50px 0 0 0;*/
@@ -1197,17 +1214,17 @@ html,body {
     align-items: center;
 }
 .vitson .vitson_brand_logo{
-    background: url("/vmo/images/common/sub_brand_logo_01.png") no-repeat 0 0;
+    background: url("../images/common/sub_brand_logo_01.png") no-repeat 0 0;
     min-width:200px;
     min-height:55px;
 }
 .mro .mro_brand_logo{
-    background: url("/vmo/images/common/sub_brand_logo_02.png") no-repeat 0 0;
+    background: url("../images/common/sub_brand_logo_02.png") no-repeat 0 0;
     min-width:280px;
     min-height:50px;
 }
 .homevit .homevit_brand_logo{
-    background: url("/vmo/images/common/sub_brand_logo_03.png") no-repeat 0 0;
+    background: url("../images/common/sub_brand_logo_03.png") no-repeat 0 0;
     min-width:200px;
     min-height:100px;
 }
@@ -1250,94 +1267,94 @@ html,body {
     background-repeat: no-repeat;
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(1) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_01.png");
+    background-image: url("../images/common/sub_brand_img_01_01.png?v=240416");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(2) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_02.png");
+    background-image: url("../images/common/sub_brand_img_01_02.png?v=240416");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(3) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_03.png");
+    background-image: url("../images/common/sub_brand_img_01_03.png");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(4) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_04.png");
+    background-image: url("../images/common/sub_brand_img_01_04.png");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(5) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_05.png");
+    background-image: url("../images/common/sub_brand_img_01_05.png?v=240416");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(6) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_06.png");
+    background-image: url("../images/common/sub_brand_img_01_06.png");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(7) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_07.png");
+    background-image: url("../images/common/sub_brand_img_01_07.png?v=240416");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(8) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_08.png");
+    background-image: url("../images/common/sub_brand_img_01_08.png");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(9) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_09.png");
+    background-image: url("../images/common/sub_brand_img_01_09.png");
 }
 .vitson .vitson_brand_box .brand_img_list li:nth-child(10) i{
-    background-image: url("/vmo/images/common/sub_brand_img_01_10.png");
+    background-image: url("../images/common/sub_brand_img_01_10.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(1) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_01.png");
+    background-image: url("../images/common/sub_brand_img_02_01.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(2) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_02.png");
+    background-image: url("../images/common/sub_brand_img_02_02.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(3) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_03.png");
+    background-image: url("../images/common/sub_brand_img_02_03.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(4) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_04.png");
+    background-image: url("../images/common/sub_brand_img_02_04.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(5) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_05.png");
+    background-image: url("../images/common/sub_brand_img_02_05.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(6) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_06.png");
+    background-image: url("../images/common/sub_brand_img_02_06.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(7) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_07.png");
+    background-image: url("../images/common/sub_brand_img_02_07.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(8) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_08.png");
+    background-image: url("../images/common/sub_brand_img_02_08.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(9) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_09.png");
+    background-image: url("../images/common/sub_brand_img_02_09.png");
 }
 .mro .mro_brand_box .brand_img_list li:nth-child(10) i{
-    background-image: url("/vmo/images/common/sub_brand_img_02_10.png");
+    background-image: url("../images/common/sub_brand_img_02_10.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(1) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_01.png");
+    background-image: url("../images/common/sub_brand_img_03_01.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(2) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_02.png");
+    background-image: url("../images/common/sub_brand_img_03_02.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(3) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_03.png");
+    background-image: url("../images/common/sub_brand_img_03_03.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(4) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_04.png");
+    background-image: url("../images/common/sub_brand_img_03_04.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(5) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_05.png");
+    background-image: url("../images/common/sub_brand_img_03_05.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(6) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_06.png");
+    background-image: url("../images/common/sub_brand_img_03_06.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(7) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_07.png");
+    background-image: url("../images/common/sub_brand_img_03_07.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(8) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_08.png");
+    background-image: url("../images/common/sub_brand_img_03_08.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(9) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_09.png");
+    background-image: url("../images/common/sub_brand_img_03_09.png");
 }
 .homevit .homevit_brand_box .brand_img_list li:nth-child(10) i{
-    background-image: url("/vmo/images/common/sub_brand_img_03_10.png");
+    background-image: url("../images/common/sub_brand_img_03_10.png");
 }
 
 .sales_box .sales_tit{
@@ -1545,10 +1562,18 @@ html,body {
 }
 .board_box .board_notice_wrap .board_notice_img{
     max-width:400px;
+    overflow: hidden;
+    height: 187px;
+    text-align: center;
+    background-color: #f7f7f7;
+    min-width: 400px;
+    border-radius: 15px;
 }
 .board_box .board_notice_wrap .board_notice_img img{
     border-radius: 15px;
+    min-height: 187px;
     object-fit: cover;
+    max-height: 100%;
     transition: all 0.3s;
 }
 .board_box .board_notice_wrap .board_notice_box{
